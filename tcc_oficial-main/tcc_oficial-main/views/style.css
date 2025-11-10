@@ -1,0 +1,35 @@
+ /* Estilo para usar a fonte Montserrat com Tailwind */
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* Efeito suave de transição para o slider */
+        .slider-track {
+            transition: transform 0.5s ease-in-out;
+        }
+        /* Estilos principais do logo */
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            /* Tamanho da fonte adaptado para o formulário */
+            font-size: clamp(2.2rem, 8vw, 3rem); 
+            font-weight: 700; /* Peso da fonte */
+            letter-spacing: -1.5px; /* Espaçamento entre as letras */
+            margin-bottom: 1rem; /* Espaço abaixo do logo */
+        }
+
+        /* Cores para cada parte do texto do logo */
+        .smart {
+            color: #2c3e50; /* Azul escuro/acinzentado */
+        }
+        .ca {
+            color: #e74c3c; /* Vermelho */
+        }
+        .mp {
+            color: #f1c40f; /* Amarelo */
+        }
+        .us {
+            color: #2ecc71; /* Verde */
+        }
+        /* Estilo para usar a fonte Montserrat com Tailwind */
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }

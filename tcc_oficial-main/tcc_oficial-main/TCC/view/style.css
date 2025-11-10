@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    /* font-size: 20px; */
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* LOGO */
+.logo {
+    font-family: 'Poppins', sans-serif;
+
+    /* Tamanho da fonte adaptado para o formulário */
+    /* Usando clamp para responsividade */
+    /* clamp(valor mínimo, valor preferido, valor máximo) */
+    font-size: clamp(2.2rem, 8vw, 3rem); 
+    font-weight: 700; /* Peso da fonte */
+    letter-spacing: -1.5px; /* Espaçamento entre as letras */
+    margin-bottom: 1rem; /* Espaço abaixo do logo */
+    margin-top: 1rem;
+    margin-left: 12rem;
+}
+        
+ /* Cores para cada parte do texto do logo */
+    .Syn {
+        color: #3a5269; /* Azul escuro/acinzentado */
+    }
+    .Cla {
+        color: #376fa3; /* Azul marinho */
+    }
+    .ss {
+        color: #4773c5; /* Azul cobalto */
+}
