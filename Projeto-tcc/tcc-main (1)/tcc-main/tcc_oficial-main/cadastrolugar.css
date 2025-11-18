@@ -1,0 +1,122 @@
+
+
+/* ===== FORMULÁRIO CONTAINER E LAYOUT (Do seu CSS) ===== */
+.form-agendamento {
+    background: #e7dede;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.form-agendamento h2 {
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 24px;
+}
+
+/* --- Campos de Formulário --- */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-agendamento label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-agendamento input[type="text"],
+.form-agendamento input[type="number"],
+.form-agendamento select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    margin-top: 0;
+    background-color: white; /* Garante fundo branco para selects/inputs */
+}
+
+/* Estilo para a seleção de tipo (radio buttons - Do seu CSS) */
+.selection-group {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+
+.selection-group input[type="radio"] {
+    display: none;
+}
+
+.selection-group label {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    color: #555;
+    flex-grow: 1;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.selection-group input[type="radio"]:checked + label {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+
+/* --- Botão (Do seu CSS) --- */
+.form-agendamento button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.form-agendamento button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Feedback Message (Do seu CSS) --- */
+#feedbackMessage {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+    /* O JS controla se é 'block' ou 'none' */
+}
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}

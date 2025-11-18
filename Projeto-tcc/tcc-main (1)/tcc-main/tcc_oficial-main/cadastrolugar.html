@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastrolugar.css">
+    <title>SmartCampus - Cadastro de Localização</title>
+
+  
+<!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Chart.js para Gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        /* Estilo para usar a fonte Montserrat com Tailwind */
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Efeito suave de transição para o slider */
+        .slider-track {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Estilos principais do logo */
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.2rem, 8vw, 3rem);
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            margin-bottom: 1rem;
+        }
+
+        /* Cores para cada parte do texto do logo */
+        .smart {
+            color: #2c3e50;
+        }
+
+        .ca {
+            color: #3a6192;
+        }
+
+        .mp {
+            color: #376fa3;
+        }
+
+        .us {
+            color: #4773c5;
+        }
+
+        /* Cabeçalho e navegação */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        #menu menu-desktop a {
+            color: #4b5563;
+            transition: color 0.3s;
+        }
+
+        #menu menu-desktop a:hover {
+            color: #3b82f6;
+        }
+
+        #menu menu-mobile a {
+            background-color: rgb(255, 255, 255);
+            padding: 8px 16px;
+            font-size: 14px;
+          
+            text-align: left;
+        }
+
+        .menu-mobile a:hover {
+            background-color: #ffffff;
+        }
+
+        .button-login {
+            background-color: #3b82f6;
+            color: rgb(255, 255, 255);
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .button-login:hover {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Cabeçalho e Navegação -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+
+            <!-- Estrutura do Logo -->
+            <div class="logo">
+                <span class="smart">Smart</span><span class="ca">Ca</span><span class="mp">mp</span><span class="us">us</span>
+            </div>
+
+            <!-- Menu para Desktop -->
+            <div class="hidden md:flex items-center space-x-6 menu-desktop">
+                <a href="sobre.html" class="text-gray-600 hover:text-blue-600 transition duration-300" id="menu">Sobre</a>
+                <a href="Agendar.html" class="text-gray-600 hover:text-blue-600 transition duration-300" id="menu">Agendar</a>
+                <a href="cadastro.html" class="text-gray-600 hover:text-blue-600 transition duration-300" id="menu">Cadastro</a>
+                <a href="cadastrolugar.html" class="text-gray-600 hover:text-blue-600 transition duration-300" id="menu">Cadastro Localização</a>
+                <a href="login.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300" id="login">Login</a>
+                <a href="perfil.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300" id="perfil">Perfil</a>
+            </div>
+
+            <!-- Botão do Menu Mobile -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+        </nav>
+
+        <!-- Menu Mobile (oculto por padrão) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="sobre.html" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-100">Sobre</a>
+            <a href="Agendar.html" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-100">Agendar</a>
+            <a href="cadastro.html" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-100">Cadastro</a>
+            <a href="login.html" class="block py-2 px-6 text-sm text-blue-600 hover:bg-gray-100">Login</a>
+        </div>
+    </header>
+
+<br>
+<br>
+<br>
+<br>
+
+    <!-- CONTEÚDO PRINCIPAL (FORMULÁRIO DE CADASTRO DE LOCALIZAÇÃO) -->
+    <main>
+        <div class="form-agendamento">
+            <h2>Cadastrar Nova Localização </h2>
+            
+            <form id="formLocalizacao">
+                
+                <!-- SELETOR DE TIPO DE CADASTRO -->
+                <div class="form-group">
+                    <label>Selecione o que você deseja cadastrar:</label>
+                    <div id="tipoCadastroSelection" class="selection-group">
+                        <input type="radio" id="radio-predio" name="tipo_cadastro" value="predio" checked> 
+                        <label for="radio-predio">Prédio</label>
+                        
+                        <input type="radio" id="radio-andar" name="tipo_cadastro" value="andar"> 
+                        <label for="radio-andar">Andar</label>
+                        
+                        <input type="radio" id="radio-sala" name="tipo_cadastro" value="sala"> 
+                        <label for="radio-sala">Sala</label>
+                    </div>
+                </div>
+
+                <!-- CAMPOS DE ENTRADA DINÂMICOS -->
+                <div id="dynamicFieldsContainer">
+                    <!-- Input para Prédio (Visível por padrão) -->
+                    <div id="input-predio-group" class="form-group">
+                        <label for="predio">Identificação do Prédio</label>
+                        <input type="text" id="predio" name="predio" placeholder="Ex: Prédio A" maxlength="50">
+                    </div>
+
+                    <!-- Input para Andar (Inicialmente oculto) -->
+                    <div id="input-andar-group" class="form-group hidden">
+                        <label for="andar">Número ou Nome do Andar</label>
+                        <input type="text" id="andar" name="andar_input" placeholder="Ex: Térreo " maxlength="20">
+                    </div>
+
+                    <!-- Input para Sala (Inicialmente oculto) -->
+                    <div id="input-sala-group" class="form-group hidden">
+                        <label for="sala">Nome Sala ou Unidade</label>
+                        <input type="text" id="sala" name="sala_input" placeholder="Auditório Principal" maxlength="50">
+                    </div>
+                </div>
+                
+                <!-- Feedback Message -->
+                <div id="feedbackMessage"></div>
+
+                <button type="submit">
+                    Cadastrar Prédio
+                </button>
+            </form>
+        </div>
+    </main>
+     <script src="cadastrolugar.js"></script>
+</body>
+</html>
